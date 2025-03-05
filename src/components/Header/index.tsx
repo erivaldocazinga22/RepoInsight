@@ -22,11 +22,8 @@ export const Header = () => {
                 
                 {pathname !== "/dashboard" ? (
                     <div className="flex items-center gap-4">
-                        <Link href="/sign-in" className="px-4 py-2 rounded-md border border-border text-accent-foreground hover:bg-border focus:ring-2 focus:ring-border focus:outline-none transition-all">
+                        <Link href="/sign-in" className="px-4 py-2 rounded-md border border-border text-accent-foreground hover:bg-gradient-to-tr from-blue-500 to-purple-600 hover:brightness-110 focus:ring-2 focus:hover:ring-purple-500 hover:bg-border focus:outline-none transition-all">
                             Entrar na Conta
-                        </Link>
-                        <Link href="/register" className="px-4 py-2 rounded-md text-white bg-gradient-to-tr from-blue-500 to-purple-600 hover:brightness-110 focus:ring-2 focus:ring-purple-500 focus:outline-none transition-all">
-                            Criar Conta
                         </Link>
                     </div>
                 ) : <UserAvatar avatar_url="" name="Maria Bernarda Maldalena" />}

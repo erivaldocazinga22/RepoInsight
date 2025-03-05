@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "RepoInsight",
   description:
     "Transforme a visibilidade e qualidade dos seus projetos com insights precisos para desenvolvedores e recrutadores.",
+	icons: {
+		icon: "/favicon.svg",
+	},
 };
 
 export default function RootLayout({

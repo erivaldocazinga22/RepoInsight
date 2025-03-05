@@ -2,7 +2,7 @@ import { SignInForm } from "@/components/Forms/signInForm";
 import { OutherNetworks } from "@/components/outher-networks";
 import { TypewriterEffect } from "@/components/TypewriterEffect";
 import { OUTHER_NETWORKS } from "@/statics/auth";
-import { GitBranch } from "lucide-react";
+import { GitBranch, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -15,7 +15,12 @@ export default function SignInPage() {
     ];
 
     return (
-        <div className="flex min-h-screen">
+        <div className="flex min-h-screen relative">
+            <div className="absolute top-4 left-4 z-50">
+                <Link href="/" title="Voltar ao inicio" className="text-neutral-500 hover:text-foreground">
+                    <X className="w-6" />
+                </Link>
+            </div>
             <div className="hidden lg:flex flex-1 bg-cover bg-center relative">
                 <Image
                     src="/background-repoinsight.png"
@@ -35,7 +40,6 @@ export default function SignInPage() {
                         <GitBranch className="w-6 " />
                         <span className="hidden sm:inline-block text-2xl font-bold">
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-violet-500 to-blue-600">RepoInsight</span>
-                            
                         </span>
                     </div>
 

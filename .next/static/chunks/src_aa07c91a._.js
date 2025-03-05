@@ -1559,7 +1559,7 @@ function NavigationButtons({ currentStep, totalSteps, onBack, onNext, isSubmitti
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Forms/signUpForm/steps/navigation-buttons.tsx",
                                     lineNumber: 56,
-                                    columnNumber: 8
+                                    columnNumber: 9
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Forms/signUpForm/steps/navigation-buttons.tsx",

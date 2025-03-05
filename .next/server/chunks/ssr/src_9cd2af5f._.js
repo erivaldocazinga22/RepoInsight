@@ -6,6 +6,7 @@ module.exports = {
 var { g: global, d: __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
+    "calculatePasswordStrength": (()=>calculatePasswordStrength),
     "cn": (()=>cn)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/clsx/dist/clsx.mjs [app-ssr] (ecmascript)");
@@ -14,6 +15,21 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$tailwind$2d$
 ;
 function cn(...inputs) {
     return (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$tailwind$2d$merge$2f$dist$2f$bundle$2d$mjs$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["twMerge"])((0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["clsx"])(inputs));
+}
+function calculatePasswordStrength(password) {
+    if (!password) return 0;
+    let strength = 0;
+    // Length check
+    if (password.length >= 8) strength += 1;
+    // Contains lowercase
+    if (/[a-z]/.test(password)) strength += 1;
+    // Contains uppercase
+    if (/[A-Z]/.test(password)) strength += 1;
+    // Contains number
+    if (/[0-9]/.test(password)) strength += 1;
+    // Contains special character
+    if (/[^a-zA-Z0-9]/.test(password)) strength += 1;
+    return strength;
 }
 }}),
 "[project]/src/components/ui/avatar.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
@@ -434,27 +450,16 @@ const Header = ()=>{
                 }, this),
                 pathname !== "/dashboard" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex items-center gap-4",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                            href: "/sign-in",
-                            className: "px-4 py-2 rounded-md border border-border text-accent-foreground hover:bg-border focus:ring-2 focus:ring-border focus:outline-none transition-all",
-                            children: "Entrar na Conta"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/Header/index.tsx",
-                            lineNumber: 25,
-                            columnNumber: 25
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                            href: "/register",
-                            className: "px-4 py-2 rounded-md text-white bg-gradient-to-tr from-blue-500 to-purple-600 hover:brightness-110 focus:ring-2 focus:ring-purple-500 focus:outline-none transition-all",
-                            children: "Criar Conta"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/Header/index.tsx",
-                            lineNumber: 28,
-                            columnNumber: 25
-                        }, this)
-                    ]
-                }, void 0, true, {
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                        href: "/sign-in",
+                        className: "px-4 py-2 rounded-md border border-border text-accent-foreground hover:bg-gradient-to-tr from-blue-500 to-purple-600 hover:brightness-110 focus:ring-2 focus:hover:ring-purple-500 hover:bg-border focus:outline-none transition-all",
+                        children: "Entrar na Conta"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/Header/index.tsx",
+                        lineNumber: 25,
+                        columnNumber: 25
+                    }, this)
+                }, void 0, false, {
                     fileName: "[project]/src/components/Header/index.tsx",
                     lineNumber: 24,
                     columnNumber: 21
@@ -463,7 +468,7 @@ const Header = ()=>{
                     name: "Maria Bernarda Maldalena"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Header/index.tsx",
-                    lineNumber: 32,
+                    lineNumber: 29,
                     columnNumber: 21
                 }, this)
             ]

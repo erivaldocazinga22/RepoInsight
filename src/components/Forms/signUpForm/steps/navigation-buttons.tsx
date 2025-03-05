@@ -53,7 +53,7 @@ export function NavigationButtons({
 					{isLastStep ? (
 						<>
 							<div className="absolute w-7 h-7 left-2 top-1/2 -translate-y-1/2 rounded-full hidden group-hover:flex items-center justify-center bg-white/20">
-							<Lock className="opacity-60 h-4 w-4" />
+								<Lock className="opacity-60 h-4 w-4" />
 							</div>
 							<span>Finalizar Cadastro</span>
 						</>
