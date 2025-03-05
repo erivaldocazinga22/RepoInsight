@@ -23,3 +23,24 @@
 - Analise completa
 - Comparativo(Seu repositório vs média do setor)
 - Tempo de resposta excelente
+
+
+## PROMPTS
+**Prompt 01:**  
+> Analise o perfil do usuário [USERNAME] no GitHub e forneça uma avaliação crítica, retornando apenas os seguintes tópicos:  
+>  
+> - **Pontos Fortes:** Destaque as qualidades do perfil, como variedade de projetos, tecnologias usadas, frequência de commits, engajamento na comunidade, etc.  
+> - **Pontos Fracos:** Identifique áreas que podem ser melhoradas, como documentação, organização dos repositórios, falta de testes, etc.  
+> - **Opções para Melhorar:** Sugira melhorias práticas para cada ponto fraco identificado, incluindo ferramentas, técnicas ou boas práticas.  
+>  
+> O resultado deve ser formatado exclusivamente em **Markdown**, sem qualquer explicação adicional ou texto introdutório. 
+
+
+**Prompt 02:**  
+> Analise o repositório [REPO_URL] no GitHub e forneça uma avaliação crítica, retornando apenas os seguintes tópicos:  
+>  
+> - **Pontos Fortes:** Destaque as qualidades do repositório, como código bem estruturado, boas práticas, documentação clara, organização, etc.  
+> - **Pontos Fracos:** Identifique áreas que podem ser melhoradas, como falta de documentação, ausência de testes, código desorganizado, problemas de performance, etc.  
+> - **Opções para Melhorar:** Sugira melhorias práticas para cada ponto fraco identificado, incluindo boas práticas de desenvolvimento, ferramentas úteis e mudanças recomendadas.  
+>  
+> O resultado deve ser formatado exclusivamente em **Markdown**, sem qualquer explicação adicional ou texto introdutório.
