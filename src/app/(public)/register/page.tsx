@@ -11,7 +11,9 @@ export default function RegisterPage() {
                     Voltar
                 </Link>
             </div>
-            <SignUpForm />
+            <div className="mt-10">
+                <SignUpForm />
+            </div>
         </div>
     )
 }
