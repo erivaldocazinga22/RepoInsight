@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Footer } from "@/components/footer";
 import { cn } from "@/lib/utils";
+import { Header } from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -19,10 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt" suppressHydrationWarning className="dark">
-      <body className={cn("relative", inter.className)}>
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-transparent to-blue-500/20 opacity-30" />
+      <body className={cn("relative min-h-dvh bg-background text-foreground", inter.className)}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
-          {children}
+          <main className="z-50 flex flex-col space-y-4">
+            <Header />
+            {children}
+            <Footer />
+          </main>
         </ThemeProvider>
       </body>
     </html>
