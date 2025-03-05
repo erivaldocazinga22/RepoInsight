@@ -1,3 +1,4 @@
+"use client"
 import { AccessLevelsChart } from "@/components/charts/accessLevelsChart";
 import { LoginActivityChart } from "@/components/charts/loginActivityChart";
 import { UsersGrowthChart } from "@/components/charts/usersGrowthChart";
