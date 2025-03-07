@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file:///home/erivaldo-dev/www/RepoInsight/src/components/theme-provider.tsx"],"sourcesContent":["\"use client\"\nimport { ThemeProvider as NextThemesProvider } from \"next-themes\"\nimport type { ThemeProviderProps } from \"next-themes\"\n\nexport function ThemeProvider({ children, ...props }: ThemeProviderProps) {\n  return <NextThemesProvider {...props}>{children}</NextThemesProvider>\n}\n\n"],"names":[],"mappings":";;;;AACA;AADA;;;AAIO,SAAS,cAAc,EAAE,QAAQ,EAAE,GAAG,OAA2B;IACtE,qBAAO,8OAAC,gJAAA,CAAA,gBAAkB;QAAE,GAAG,KAAK;kBAAG;;;;;;AACzC","debugId":null}},
+    {"offset": {"line": 33, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 63, "column": 0}, "map": {"version":3,"sources":["file:///home/erivaldo-dev/www/RepoInsight/src/providers/next-auth.provider.tsx"],"sourcesContent":["\"use client\";\nimport { SessionProvider } from \"next-auth/react\";\n\nexport function NextAuthProvider({ children }: { children: React.ReactNode }) {\n    return <SessionProvider>{children}</SessionProvider>;\n}\n"],"names":[],"mappings":";;;;AACA;AADA;;;AAGO,SAAS,iBAAiB,EAAE,QAAQ,EAAiC;IACxE,qBAAO,8OAAC,8IAAA,CAAA,kBAAe;kBAAE;;;;;;AAC7B","debugId":null}},
+    {"offset": {"line": 80, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

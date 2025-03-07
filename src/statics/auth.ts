@@ -1,5 +1,6 @@
 "use client"
 import { Github } from "lucide-react";
+import { signIn } from "next-auth/react";
 import type { ElementType } from "react";
 import { v4 as uuidV4 } from "uuid";
 export interface IOutherNetwork {
@@ -10,7 +11,7 @@ export interface IOutherNetwork {
 }
 
 const handleGithubSignIn = async () => {
-	console.log("Login com o github bem sucedido");
+	signIn("github", { redirect: true, callbackUrl: "/dashboard" });
 };
 
 export const OUTHER_NETWORKS: IOutherNetwork[] = [

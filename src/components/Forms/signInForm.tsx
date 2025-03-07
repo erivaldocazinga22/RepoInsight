@@ -7,7 +7,8 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "../ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { type SignInRequest, signInSchema } from "@/models/auth.model";
-
+import { signIn } from "next-auth/react";
+import { toast } from "sonner";
 
 export const SignInForm = () => {
 	const form = useForm<SignInRequest>({
@@ -20,7 +21,17 @@ export const SignInForm = () => {
 		},
 	});
 	const handleSignIn = async (data: SignInRequest) => {
-		console.log(data);
+		const result = await signIn("credentials", {
+			redirect: false,
+			email: data.email,
+			password: data.password
+		})
+
+        if (result?.error) {
+			toast("Credenciais inválidas")
+        } else {
+            window.location.href = "/"
+        }
 	};
 	return (
 		<Form {...form}>

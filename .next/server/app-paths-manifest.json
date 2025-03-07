@@ -1,6 +1,5 @@
 {
-  "/(private)/dashboard/page": "app/(private)/dashboard/page.js",
-  "/(private)/page": "app/(private)/page.js",
   "/(public)/sign-in/page": "app/(public)/sign-in/page.js",
-  "/(public)/register/page": "app/(public)/register/page.js"
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/(private)/page": "app/(private)/page.js"
 }

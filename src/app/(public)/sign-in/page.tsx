@@ -6,8 +6,13 @@ import { GitBranch, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import bcrypt from "bcrypt";
+
 
 export default function SignInPage() {
+    ((name: string) => {
+        console.log(bcrypt.hash(name, 10));
+    })("Password")
     const messages = [
         "Bem-vindo ao RepoInsight",
         "Analise seus repositórios como um profissional",

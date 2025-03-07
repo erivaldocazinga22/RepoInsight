@@ -6,6 +6,7 @@
 var { g: global, d: __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
 __turbopack_context__.s({
+    "calculatePasswordStrength": (()=>calculatePasswordStrength),
     "cn": (()=>cn)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/clsx/dist/clsx.mjs [app-client] (ecmascript)");
@@ -14,6 +15,21 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$tailwind$2d$
 ;
 function cn(...inputs) {
     return (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$tailwind$2d$merge$2f$dist$2f$bundle$2d$mjs$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["twMerge"])((0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["clsx"])(inputs));
+}
+function calculatePasswordStrength(password) {
+    if (!password) return 0;
+    let strength = 0;
+    // Length check
+    if (password.length >= 8) strength += 1;
+    // Contains lowercase
+    if (/[a-z]/.test(password)) strength += 1;
+    // Contains uppercase
+    if (/[A-Z]/.test(password)) strength += 1;
+    // Contains number
+    if (/[0-9]/.test(password)) strength += 1;
+    // Contains special character
+    if (/[^a-zA-Z0-9]/.test(password)) strength += 1;
+    return strength;
 }
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);

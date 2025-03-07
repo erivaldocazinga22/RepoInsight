@@ -336,7 +336,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$f
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/input.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$hookform$2f$resolvers$2f$zod$2f$dist$2f$zod$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@hookform/resolvers/zod/dist/zod.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$models$2f$auth$2e$model$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/models/auth.model.ts [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$react$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next-auth/react/index.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/sonner/dist/index.mjs [app-ssr] (ecmascript)");
 "use client";
+;
+;
 ;
 ;
 ;
@@ -356,7 +360,16 @@ const SignInForm = ()=>{
         }
     });
     const handleSignIn = async (data)=>{
-        console.log(data);
+        const result = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$react$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["signIn"])("credentials", {
+            redirect: false,
+            email: data.email,
+            password: data.password
+        });
+        if (result?.error) {
+            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"])("Credenciais inválidas");
+        } else {
+            window.location.href = "/";
+        }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Form"], {
         ...form,
@@ -374,7 +387,7 @@ const SignInForm = ()=>{
                                     children: "Email"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Forms/signInForm.tsx",
-                                    lineNumber: 33,
+                                    lineNumber: 44,
                                     columnNumber: 8
                                 }, void 0),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -385,28 +398,28 @@ const SignInForm = ()=>{
                                         ...field
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Forms/signInForm.tsx",
-                                        lineNumber: 35,
+                                        lineNumber: 46,
                                         columnNumber: 9
                                     }, void 0)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Forms/signInForm.tsx",
-                                    lineNumber: 34,
+                                    lineNumber: 45,
                                     columnNumber: 8
                                 }, void 0),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                     fileName: "[project]/src/components/Forms/signInForm.tsx",
-                                    lineNumber: 42,
+                                    lineNumber: 53,
                                     columnNumber: 8
                                 }, void 0)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Forms/signInForm.tsx",
-                            lineNumber: 32,
+                            lineNumber: 43,
                             columnNumber: 7
                         }, void 0)
                 }, void 0, false, {
                     fileName: "[project]/src/components/Forms/signInForm.tsx",
-                    lineNumber: 28,
+                    lineNumber: 39,
                     columnNumber: 5
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormField"], {
@@ -419,7 +432,7 @@ const SignInForm = ()=>{
                                     children: "Senha"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Forms/signInForm.tsx",
-                                    lineNumber: 51,
+                                    lineNumber: 62,
                                     columnNumber: 8
                                 }, void 0),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -429,28 +442,28 @@ const SignInForm = ()=>{
                                         ...field
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Forms/signInForm.tsx",
-                                        lineNumber: 53,
+                                        lineNumber: 64,
                                         columnNumber: 9
                                     }, void 0)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Forms/signInForm.tsx",
-                                    lineNumber: 52,
+                                    lineNumber: 63,
                                     columnNumber: 8
                                 }, void 0),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                     fileName: "[project]/src/components/Forms/signInForm.tsx",
-                                    lineNumber: 55,
+                                    lineNumber: 66,
                                     columnNumber: 8
                                 }, void 0)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Forms/signInForm.tsx",
-                            lineNumber: 50,
+                            lineNumber: 61,
                             columnNumber: 7
                         }, void 0)
                 }, void 0, false, {
                     fileName: "[project]/src/components/Forms/signInForm.tsx",
-                    lineNumber: 46,
+                    lineNumber: 57,
                     columnNumber: 5
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -463,30 +476,30 @@ const SignInForm = ()=>{
                                 className: "opacity-60"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Forms/signInForm.tsx",
-                                lineNumber: 64,
+                                lineNumber: 75,
                                 columnNumber: 7
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/Forms/signInForm.tsx",
-                            lineNumber: 63,
+                            lineNumber: 74,
                             columnNumber: 6
                         }, this),
                         "Entrar"
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Forms/signInForm.tsx",
-                    lineNumber: 59,
+                    lineNumber: 70,
                     columnNumber: 5
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Forms/signInForm.tsx",
-            lineNumber: 27,
+            lineNumber: 38,
             columnNumber: 4
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/Forms/signInForm.tsx",
-        lineNumber: 26,
+        lineNumber: 37,
         columnNumber: 3
     }, this);
 };
@@ -691,12 +704,17 @@ __turbopack_context__.s({
     "OUTHER_NETWORKS": (()=>OUTHER_NETWORKS)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$github$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Github$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/github.js [app-ssr] (ecmascript) <export default as Github>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$react$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next-auth/react/index.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$uuid$2f$dist$2f$esm$2f$v4$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__v4$3e$__ = __turbopack_context__.i("[project]/node_modules/uuid/dist/esm/v4.js [app-ssr] (ecmascript) <export default as v4>");
 "use client";
 ;
 ;
+;
 const handleGithubSignIn = async ()=>{
-    console.log("Login com o github bem sucedido");
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$react$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["signIn"])("github", {
+        redirect: true,
+        callbackUrl: "/dashboard"
+    });
 };
 const OUTHER_NETWORKS = [
     {

@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 24, "column": 0}, "map": {"version":3,"sources":["file:///home/erivaldo-dev/www/RepoInsight/src/components/Hero/index.tsx/proxy.mjs"],"sourcesContent":["import { registerClientReference } from \"react-server-dom-turbopack/server.edge\";\nexport const HeroSection = registerClientReference(\n    function() { throw new Error(\"Attempted to call HeroSection() from the server but HeroSection is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.\"); },\n    \"[project]/src/components/Hero/index.tsx <module evaluation>\",\n    \"HeroSection\",\n);\n"],"names":[],"mappings":";;;AAAA;;AACO,MAAM,cAAc,CAAA,GAAA,qPAAA,CAAA,0BAAuB,AAAD,EAC7C;IAAa,MAAM,IAAI,MAAM;AAAsO,GACnQ,+DACA","debugId":null}},
+    {"offset": {"line": 32, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 38, "column": 0}, "map": {"version":3,"sources":["file:///home/erivaldo-dev/www/RepoInsight/src/components/Hero/index.tsx/proxy.mjs"],"sourcesContent":["import { registerClientReference } from \"react-server-dom-turbopack/server.edge\";\nexport const HeroSection = registerClientReference(\n    function() { throw new Error(\"Attempted to call HeroSection() from the server but HeroSection is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.\"); },\n    \"[project]/src/components/Hero/index.tsx\",\n    \"HeroSection\",\n);\n"],"names":[],"mappings":";;;AAAA;;AACO,MAAM,cAAc,CAAA,GAAA,qPAAA,CAAA,0BAAuB,AAAD,EAC7C;IAAa,MAAM,IAAI,MAAM;AAAsO,GACnQ,2CACA","debugId":null}},
+    {"offset": {"line": 46, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 52, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 56, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 62, "column": 0}, "map": {"version":3,"sources":["file:///home/erivaldo-dev/www/RepoInsight/src/app/%28private%29/page.tsx"],"sourcesContent":["import { HeroSection } from \"@/components/Hero\";\nimport { useSession } from \"next-auth/react\";\n\nexport default function Home() {\n\tconst { data: session } = useSession();\n\treturn (\n\t\t<div>\n\t\t\t<HeroSection />\n\t\t\t{JSON.stringify(session, null, 2)}\n\t\t</div>\n\t);\n}\n"],"names":[],"mappings":";;;;AAAA;AACA;;;;AAEe,SAAS;IACvB,MAAM,EAAE,MAAM,OAAO,EAAE,GAAG,CAAA,GAAA,8IAAA,CAAA,aAAU,AAAD;IACnC,qBACC,8OAAC;;0BACA,8OAAC,mIAAA,CAAA,cAAW;;;;;YACX,KAAK,SAAS,CAAC,SAAS,MAAM;;;;;;;AAGlC","debugId":null}},
+    {"offset": {"line": 88, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

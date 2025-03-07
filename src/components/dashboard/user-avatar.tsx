@@ -1,11 +1,10 @@
 "use client"
-import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import { DROPDOWN_USER } from "@/statics/dashboard";
 import { Skeleton } from "../ui/skeleton";
 import { LogOut } from "lucide-react";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Separator } from "../ui/separator";
+import { signOut } from "next-auth/react";
 
 type UserAvatarProps = {
     avatar_url?: string;
@@ -13,9 +12,10 @@ type UserAvatarProps = {
 }
 
 export const UserAvatar = ({ name, avatar_url }: UserAvatarProps) => {
-    const handleLogOut = async () => {
-        console.log("Logout realizado com sucesso");
-    }
+    const handleLogOut = async () => signOut({
+        redirect: true,
+        callbackUrl: "/sign-in"
+    });
     return (
         <Popover>
             <PopoverTrigger asChild>
